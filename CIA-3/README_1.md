@@ -1,6 +1,7 @@
 # Mission Earth — Forecasting Next-Day Wildfire Risk from a Cheap Weather Station
 
 **CIA-3 · Machine Learning (MCA 521-4) · ML for Social Good Ensemble Challenge**
+**Sharon Mathew 2547247 4MCA-B**
 Deliverable: `Mission_Earth_Wildfire_Risk_CIA3.ipynb`
 
 ---
@@ -49,16 +50,8 @@ No personal, identifiable or confidential data — every row is a public meteoro
 
 ## 3. How to run it
 
-### Option A — Google Colab (easiest, nothing to install)
 
-1. Open <https://colab.research.google.com> → **File ▸ Upload notebook** → pick
-   `Mission_Earth_Wildfire_Risk_CIA3.ipynb`.
-2. In the first code cell, uncomment the `!pip install ...` line (Colab already has most of it; `shap`
-   and `xgboost` are usually present).
-3. **Runtime ▸ Run all**. Total runtime ≈ 3–5 minutes.
-4. The dataset downloads automatically — no manual file upload needed.
-
-### Option B — Local machine (Jupyter)
+### Local machine (Jupyter)
 
 ```bash
 # Python 3.9+ recommended
@@ -71,7 +64,7 @@ jupyter notebook Mission_Earth_Wildfire_Risk_CIA3.ipynb
 # then: Kernel ▸ Restart & Run All
 ```
 
-### Option C — Headless re-execution (for verification)
+### Headless re-execution (for verification)
 
 ```bash
 pip install nbconvert ipykernel
@@ -96,7 +89,7 @@ the same library versions (verified with scikit-learn 1.8, xgboost 3.2, shap 0.5
 
 ---
 
-## 4. Notebook structure (maps 1-to-1 onto the question paper)
+## 4. Notebook structure
 
 | Section | Question | Marks | Contents |
 |---|---|---|---|
@@ -108,7 +101,7 @@ the same library versions (verified with scikit-learn 1.8, xgboost 3.2, shap 0.5
 
 ---
 
-## 5. Key methodological decisions (be ready to defend these in the viva)
+## 5. Key methodological decisions 
 
 1. **The six FWI codes are dropped.** They are the expert warning system's own output — keeping them
    inflates the score for a model an under-resourced district could not run. The notebook shows their
