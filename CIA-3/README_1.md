@@ -152,8 +152,21 @@ Headline: **without any FWI code**, four cheap sensor readings plus drought memo
 on a future month — evidence that low-cost fire screening is feasible where the expert index is not.
 
 ---
+## 7. Ethics statement (short form; §4 of the notebook has the full version)
 
-## 7. Acknowledgements
+* **Privacy:** zero personal data; all rows are public weather observations.
+* **Bias:** the only group attribute is `Region`; per-district recall/precision are reported openly
+  rather than patched with region-specific thresholds that two districts cannot support.
+* **Cost asymmetry:** a false positive costs a patrol; a false negative costs hectares. The threshold is
+  set accordingly.
+* **Human oversight:** output is a ranked daily risk score on a dashboard. **Never** an automated
+  evacuation, siren or dispatch trigger.
+* **Deployment limits:** fitted on two Algerian districts, June–September 2012, 242 usable rows. Any
+  other region, season or year requires re-fitting and local re-validation. No protection against
+  climate drift; production must range-check sensor inputs before scoring.
+---
+
+## 8. Acknowledgements
 
 * **Dataset:** Abid, F. & Izeboudjen, N. (2019). *Algerian Forest Fires Dataset*. UCI Machine Learning
   Repository. <https://archive.ics.uci.edu/dataset/547/algerian+forest+fires+dataset>
