@@ -1,7 +1,9 @@
 # Mission Earth — Forecasting Next-Day Wildfire Risk from a Cheap Weather Station
 
 **CIA-3 · Machine Learning (MCA 521-4) · ML for Social Good Ensemble Challenge**
+---
 **Sharon Mathew 2547247 4MCA-B**
+---
 Deliverable: `Mission_Earth_Wildfire_Risk_CIA3.ipynb`
 
 ---
@@ -151,33 +153,7 @@ on a future month — evidence that low-cost fire screening is feasible where th
 
 ---
 
-## 7. Three-minute video script (timings from the question paper)
-
-| Time | Say / show |
-|---|---|
-| 0:00–0:35 | Problem: rural districts have no FWI capability. Beneficiaries: forest guards, brigades, villages. Target: is tomorrow a fire day? Impact: fire days caught per patrol budget. |
-| 0:35–1:15 | Show §2: the raw UCI file is broken (banner lines, repeated header, `14.6 9`). Show the audit, the outlier decision, the 9 engineered features, and **the temporal split**. |
-| 1:15–2:10 | Show the results table and the ROC/PR figure. Baseline LR 0.926 → Stacking 0.975. Point at the confusion matrix: recall 1.000 at threshold 0.52. |
-| 2:10–3:00 | Run the last three cells live: load `wildfire_risk_pipeline.joblib`, score the synthetic Bejaia day (0.963 → HIGH RISK), show its SHAP waterfall, then state the ethics: screening aid only, human decides, false negatives dominate, model is bound to two districts and one season. |
-
----
-
-## 8. Ethics statement (short form; §4 of the notebook has the full version)
-
-* **Privacy:** zero personal data; all rows are public weather observations.
-* **Bias:** the only group attribute is `Region`; per-district recall/precision are reported openly
-  rather than patched with region-specific thresholds that two districts cannot support.
-* **Cost asymmetry:** a false positive costs a patrol; a false negative costs hectares. The threshold is
-  set accordingly.
-* **Human oversight:** output is a ranked daily risk score on a dashboard. **Never** an automated
-  evacuation, siren or dispatch trigger.
-* **Deployment limits:** fitted on two Algerian districts, June–September 2012, 242 usable rows. Any
-  other region, season or year requires re-fitting and local re-validation. No protection against
-  climate drift; production must range-check sensor inputs before scoring.
-
----
-
-## 9. Acknowledgements
+## 7. Acknowledgements
 
 * **Dataset:** Abid, F. & Izeboudjen, N. (2019). *Algerian Forest Fires Dataset*. UCI Machine Learning
   Repository. <https://archive.ics.uci.edu/dataset/547/algerian+forest+fires+dataset>
