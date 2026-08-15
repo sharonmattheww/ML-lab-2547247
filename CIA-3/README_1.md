@@ -152,7 +152,7 @@ Headline: **without any FWI code**, four cheap sensor readings plus drought memo
 on a future month — evidence that low-cost fire screening is feasible where the expert index is not.
 
 ---
-## 7. Ethics statement (short form; §4 of the notebook has the full version)
+## 7. Ethics statement
 
 * **Privacy:** zero personal data; all rows are public weather observations.
 * **Bias:** the only group attribute is `Region`; per-district recall/precision are reported openly
