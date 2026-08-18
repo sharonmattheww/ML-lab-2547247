@@ -1,6 +1,9 @@
 # Mission Earth — Forecasting Next-Day Wildfire Risk from a Cheap Weather Station
 
 **CIA-3 · Machine Learning (MCA 521-4) · ML for Social Good Ensemble Challenge**
+---
+**Sharon Mathew 2547247 4MCA-B**
+---
 Deliverable: `Mission_Earth_Wildfire_Risk_CIA3.ipynb`
 
 ---
@@ -49,16 +52,8 @@ No personal, identifiable or confidential data — every row is a public meteoro
 
 ## 3. How to run it
 
-### Option A — Google Colab (easiest, nothing to install)
 
-1. Open <https://colab.research.google.com> → **File ▸ Upload notebook** → pick
-   `Mission_Earth_Wildfire_Risk_CIA3.ipynb`.
-2. In the first code cell, uncomment the `!pip install ...` line (Colab already has most of it; `shap`
-   and `xgboost` are usually present).
-3. **Runtime ▸ Run all**. Total runtime ≈ 3–5 minutes.
-4. The dataset downloads automatically — no manual file upload needed.
-
-### Option B — Local machine (Jupyter)
+### Local machine (Jupyter)
 
 ```bash
 # Python 3.9+ recommended
@@ -71,7 +66,7 @@ jupyter notebook Mission_Earth_Wildfire_Risk_CIA3.ipynb
 # then: Kernel ▸ Restart & Run All
 ```
 
-### Option C — Headless re-execution (for verification)
+### Headless re-execution (for verification)
 
 ```bash
 pip install nbconvert ipykernel
@@ -96,7 +91,7 @@ the same library versions (verified with scikit-learn 1.8, xgboost 3.2, shap 0.5
 
 ---
 
-## 4. Notebook structure (maps 1-to-1 onto the question paper)
+## 4. Notebook structure
 
 | Section | Question | Marks | Contents |
 |---|---|---|---|
@@ -108,7 +103,7 @@ the same library versions (verified with scikit-learn 1.8, xgboost 3.2, shap 0.5
 
 ---
 
-## 5. Key methodological decisions (be ready to defend these in the viva)
+## 5. Key methodological decisions 
 
 1. **The six FWI codes are dropped.** They are the expert warning system's own output — keeping them
    inflates the score for a model an under-resourced district could not run. The notebook shows their
@@ -157,19 +152,7 @@ Headline: **without any FWI code**, four cheap sensor readings plus drought memo
 on a future month — evidence that low-cost fire screening is feasible where the expert index is not.
 
 ---
-
-## 7. Three-minute video script (timings from the question paper)
-
-| Time | Say / show |
-|---|---|
-| 0:00–0:35 | Problem: rural districts have no FWI capability. Beneficiaries: forest guards, brigades, villages. Target: is tomorrow a fire day? Impact: fire days caught per patrol budget. |
-| 0:35–1:15 | Show §2: the raw UCI file is broken (banner lines, repeated header, `14.6 9`). Show the audit, the outlier decision, the 9 engineered features, and **the temporal split**. |
-| 1:15–2:10 | Show the results table and the ROC/PR figure. Baseline LR 0.926 → Stacking 0.975. Point at the confusion matrix: recall 1.000 at threshold 0.52. |
-| 2:10–3:00 | Run the last three cells live: load `wildfire_risk_pipeline.joblib`, score the synthetic Bejaia day (0.963 → HIGH RISK), show its SHAP waterfall, then state the ethics: screening aid only, human decides, false negatives dominate, model is bound to two districts and one season. |
-
----
-
-## 8. Ethics statement (short form; §4 of the notebook has the full version)
+## 7. Ethics statement
 
 * **Privacy:** zero personal data; all rows are public weather observations.
 * **Bias:** the only group attribute is `Region`; per-district recall/precision are reported openly
@@ -181,10 +164,9 @@ on a future month — evidence that low-cost fire screening is feasible where th
 * **Deployment limits:** fitted on two Algerian districts, June–September 2012, 242 usable rows. Any
   other region, season or year requires re-fitting and local re-validation. No protection against
   climate drift; production must range-check sensor inputs before scoring.
-
 ---
 
-## 9. Acknowledgements
+## 8. Acknowledgements
 
 * **Dataset:** Abid, F. & Izeboudjen, N. (2019). *Algerian Forest Fires Dataset*. UCI Machine Learning
   Repository. <https://archive.ics.uci.edu/dataset/547/algerian+forest+fires+dataset>
